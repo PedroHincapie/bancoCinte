@@ -5,20 +5,24 @@ import { Injectable } from '@angular/core';
 })
 export class BancoCinteService {
   asesores: any = [
-    { id: 1, nombre: 'Florería la Gardenia', especialidad: 'Asesor comercia' },
-    { id: 2, nombre: 'Donas la pasadita', especialidad: 'Asesor comercia' },
+    { id: 1, nombre: 'Raul Antonio', especialidad: 'Asesor comercia' },
+    { id: 2, nombre: 'Cristina Mira', especialidad: 'Asesor' },
     {
       id: 3,
-      nombre: 'Veterinaria Huellitas Felices',
-      especialidad: 'Asesor comercia'
+      nombre: 'Pedro Jesus Hincapie Garcia',
+      especialidad: 'Director comercial'
     },
-    { id: 4, nombre: 'Sushi Suhiroll', especialidad: 'Asesor comercia' },
-    { id: 6, nombre: 'Zapatería el Clavo', especialidad: 'Asesor comercia' }
+    { id: 4, nombre: 'Sebastina Giraldo', especialidad: 'Cajero' },
+    { id: 6, nombre: 'Erika Yepez', especialidad: 'Director Administrtivo' }
   ];
 
   constructor() {}
 
   getAsesores() {
     return this.asesores;
+  }
+
+  deleteAsesor(asesor, asesores) {
+     return asesores.filter(el => el.nombre !== asesor);
   }
 }

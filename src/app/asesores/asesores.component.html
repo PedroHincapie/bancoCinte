@@ -17,8 +17,8 @@
         <th scope="row">{{asesor.nombre}}</th>
         <td>{{asesor.especialidad}}</td>
         <td>
-          <button type="button" class="btn btn-danger">Danger</button>
-          <button type="button" class="btn btn-primary">Success</button>
+          <button type="button" class="btn btn-danger" (click)="deleteAesor(asesor.nombre, asesores)" >Eliminar</button>
+          <button type="button" class="btn btn-primary">Actualizar</button>
         </td>
       </tr>
     </tbody>

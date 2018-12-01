@@ -14,4 +14,10 @@ export class AsesoresComponent implements OnInit {
   ngOnInit() {
     this.asesores = this.servicio.getAsesores();
   }
+
+  deleteAesor(asesor, asesores ) {
+    this.asesores = this.servicio.deleteAsesor(asesor, asesores);
+  }
+
+
 }

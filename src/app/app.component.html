@@ -19,9 +19,13 @@
       </p>
     </div>
   </section>
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a routerLink="/clientes" routerLinkActive="active">Clientes</a>
-    <a routerLink="/asesores" routerLinkActive="active">Asesores</a>
-  </nav>
+  <ul class="nav nav-tabs">
+    <li class="nav-item">
+      <a routerLink="/asesores" class="nav-link"  routerLinkActive="active">Asesores</a>
+    </li>
+    <li class="nav-item">
+      <a routerLink="/clientes" class="nav-link" routerLinkActive="active">Clientes</a>
+    </li>
+  </ul>
   <router-outlet></router-outlet>
 </div>

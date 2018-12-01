@@ -5,15 +5,17 @@ import { AppComponent } from './app.component';
 import { AsesoresComponent } from './asesores/asesores.component';
 import { RouterModule, Routes } from '@angular/router';
 import { ClientesComponent } from './clientes/clientes.component';
+import { NuevoAsesorComponent } from './nuevo-asesor/nuevo-asesor.component';
 
 // Rutas del proyecto
 const appRoutes: Routes = [
   { path: 'asesores', component: AsesoresComponent},
+  {path: 'nuevo', component: NuevoAsesorComponent },
   {path: 'clientes', component: ClientesComponent }
 ];
 
 @NgModule({
-  declarations: [AppComponent, AsesoresComponent, ClientesComponent],
+  declarations: [AppComponent, AsesoresComponent, ClientesComponent, NuevoAsesorComponent],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,3 +1,26 @@
-<p>
-  asesores works!
-</p>
+<div class="container">
+  <br /><br />
+  <button type="button" class="btn btn-success">Crear Asesor</button>
+
+  <br /><br />
+
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Especialidad</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let asesor of asesores">
+        <th scope="row">{{asesor.nombre}}</th>
+        <td>{{asesor.especialidad}}</td>
+        <td>
+          <button type="button" class="btn btn-danger">Danger</button>
+          <button type="button" class="btn btn-primary">Success</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

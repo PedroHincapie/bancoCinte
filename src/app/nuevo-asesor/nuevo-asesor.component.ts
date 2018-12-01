@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BancoCinteService } from '../services/banco-cinte.service';
 
 @Component({
   selector: 'app-nuevo-asesor',
@@ -6,10 +7,18 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./nuevo-asesor.component.css']
 })
 export class NuevoAsesorComponent implements OnInit {
+  nuevoAsesor: any = {};
 
-  constructor() { }
+  constructor(private servicio: BancoCinteService) { }
 
   ngOnInit() {
   }
 
+  limpiar() {
+    this.nuevoAsesor = {};
+  }
+
+  crear(asesor) {
+    this.servicio.crear(asesor);
+  }
 }

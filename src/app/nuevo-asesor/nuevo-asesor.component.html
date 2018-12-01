@@ -1,12 +1,12 @@
 <div class="container">
     <label>Nombre</label>
-    <input type="text" class="form-control"/>
+    <input type="text" class="form-control"  [(ngModel)]="nuevoAsesor.nombre" required/>
     <br />
     <label>Especialidad</label>
-    <input type="number" class="form-control" />
+    <input type="text" class="form-control" [(ngModel)]="nuevoAsesor.especialidad" required/>
 
     <hr />
 
-    <button type="button" class="btn btn-primary" >Crear</button>
-    <button type="button" class="btn btn-info">Limpiar</button>
+    <button type="button" class="btn btn-primary" routerLink="/asesores" (click)="crear(nuevoAsesor)" >Crear</button>
+    <button type="button" class="btn btn-info" (click)="limpiar()">Limpiar</button>
 </div>

@@ -1,6 +1,6 @@
 <div class="container">
   <br /><br />
-  <button type="button" class="btn btn-success" routerLink="/nuevo">
+  <button type="button" class="btn btn-success" routerLink="/nuevoAsesor">
     Crear Asesor
   </button>
 
@@ -19,8 +19,8 @@
         <th scope="row">{{asesor.nombre}}</th>
         <td>{{asesor.especialidad}}</td>
         <td>
-          <button type="button" class="btn btn-danger" (click)="deleteAesor(asesor.nombre, asesores)" >Eliminar</button>
-          <button type="button" class="btn btn-primary">Actualizar</button>
+          <button type="button" class="btn btn-danger" (click)="deleteAsesor(asesor.id, asesores)" >Eliminar</button>
+          <button type="button" class="btn btn-primary"  routerLink="/nuevoAsesor/{{asesor.id}}">Actualizar</button>
         </td>
       </tr>
     </tbody>

@@ -15,8 +15,12 @@ export class AsesoresComponent implements OnInit {
     this.asesores = this.servicio.getAsesores();
   }
 
-  deleteAesor(asesor, asesores ) {
+  deleteAsesor(asesor, asesores ) {
     this.asesores = this.servicio.deleteAsesor(asesor, asesores);
+  }
+
+  actualizarAsesor(asesor) {
+
   }
 
 

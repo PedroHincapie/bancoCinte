@@ -23,10 +23,14 @@ export class BancoCinteService {
   }
 
   deleteAsesor(asesor, asesores) {
-     return asesores.filter(el => el.nombre !== asesor);
+     return asesores.filter(el => el.id !== asesor);
   }
 
   crear(asesor) {
     this.asesores.push(asesor);
+  }
+
+  getAsesorByid(id) {
+    return this.asesores.filter((el) => el.id == id);
   }
 }
